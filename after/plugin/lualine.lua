@@ -1,3 +1,8 @@
+local git_blame = require('gitblame')
+
+-- Disable default behavior of gitblame
+vim.g.gitblame_display_virtual_text = 0
+
 require('lualine').setup {
   options = {
     icons_enabled = true,
@@ -20,7 +25,7 @@ require('lualine').setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename'},
+    lualine_c = { { git_blame.get_current_blame_text, cond = git_blame.is_blame_text_available } },
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}

@@ -4,9 +4,6 @@ return {
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
 	{
-		'bluz71/vim-nightfly-colors', name = 'nightfly', lazy = false, priority = 1000
-	},
-	{
 		'nvim-treesitter/nvim-treesitter',
 		version = false,
 		build = ':TSUpdate',
@@ -33,20 +30,17 @@ return {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
 		dependencies = {
-		{'neovim/nvim-lspconfig'},
-		{'williamboman/mason.nvim'},
-		{'williamboman/mason-lspconfig.nvim'},
-			      {'hrsh7th/nvim-cmp'},     -- Required
+      {'neovim/nvim-lspconfig'},
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
       {'hrsh7th/cmp-nvim-lsp'}, -- Required
+      {'hrsh7th/nvim-cmp'},     -- Required
       {'L3MON4D3/LuaSnip'},     -- Required
 		}
 	},
   { 'github/copilot.vim' },
   { 'nvim-tree/nvim-tree.lua' },
   { 'nvim-tree/nvim-web-devicons' },
-  { 'andweeb/presence.nvim' },
-  { 'alexghergh/nvim-tmux-navigation' },
-  { 'akinsho/toggleterm.nvim', version = "*", config = true },
   { 
     'romgrk/barbar.nvim',
     dependencies = {
@@ -63,11 +57,44 @@ return {
     },
   },
   { "miyakogi/conoline.vim" },
-  { "APZelos/blamer.nvim" },
-  { "rebelot/kanagawa.nvim" },
   { "nvim-lualine/lualine.nvim" },
+  { "f-person/git-blame.nvim" },
   { 
     "prettier/vim-prettier",
     run = "npm i",
+  },
+  {
+    "airblade/vim-gitgutter",
+  },
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {
+      -- add any options here
+    },
+    dependencies = {
+      -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+      "MunifTanjim/nui.nvim",
+      -- OPTIONAL:
+      --   `nvim-notify` is only needed, if you want to use the notification view.
+      --   If not available, we use `mini` as the fallback
+      "rcarriga/nvim-notify",
+      }
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
+  },
+  {
+    url = 'https://github.com/windwp/nvim-ts-autotag',
+  },
+  {
+    'norcalli/nvim-colorizer.lua' 
+  },
+  {
+    "daschw/leaf.nvim",
   }
 }

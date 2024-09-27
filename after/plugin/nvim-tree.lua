@@ -6,6 +6,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 vim.keymap.set("n", "<C-b>", ":NvimTreeToggle<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", ";f", ":NvimTreeFindFile<CR>", { noremap = true, silent = true })
 
 -- OR setup with some options
 require("nvim-tree").setup({

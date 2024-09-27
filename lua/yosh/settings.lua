@@ -1,5 +1,4 @@
-vim.opt.guicursor = ""
-
+vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -25,3 +24,14 @@ vim.opt.updatetime = 50
 
 vim.g.mapleader = " "
 
+alt_send_esc = false
+
+vim.opt.listchars = {
+  tab = "▸ ",
+  trail = "·",
+  extends = "❯",
+  precedes = "❮",
+  nbsp = "␣",
+}
+
+vim.opt.list = true

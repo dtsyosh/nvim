@@ -1,8 +1,8 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv")
+-- Move selected lines down
+vim.keymap.set("x", "J", ":move '>+1<CR>gv=gv")
 
-
-vim.keymap.set("n", "<leader>ff", ":!npx prettier --write %<CR>")
+-- Move selected lines up
+vim.keymap.set("x", "K", ":move '<-2<CR>gv=gv")

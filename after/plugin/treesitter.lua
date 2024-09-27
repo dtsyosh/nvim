@@ -20,6 +20,8 @@ require'nvim-treesitter.configs'.setup {
     "vim",
     "vimdoc",
     "yaml",
+    "hcl",
+    "terraform"
   },
   incremental_selection = {
     enable = true,
