@@ -1,47 +1,46 @@
 return {
-	{
-		'nvim-telescope/telescope.nvim', tag = '0.1.2',
-		dependencies = { 'nvim-lua/plenary.nvim' }
-	},
-	{
-		'nvim-treesitter/nvim-treesitter',
-		version = false,
-		build = ':TSUpdate',
-		event = { 'BufReadPost', 'BufNewFile' },
-		dependencies = {
-			{
-				'nvim-treesitter/nvim-treesitter-textobjects',
-				init = function()
-					require('lazy.core.loader').disable_rtp_plugin('nvim-treesitter-textobjects')
-					load_textobjects = true
-				end,
-			}
-		},
-		cmd = { 'TSUpdateSync' },
-		keys = {
-			{ '<c-space>', desc = "Increment selection" },
-			{ '<bs>', desc = "Decrement selection", mode = "x" },
-		}
-	},
-	{
-		'theprimeagen/harpoon'
-	},
-	{
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v2.x',
-		dependencies = {
-      {'neovim/nvim-lspconfig'},
-      {'williamboman/mason.nvim'},
-      {'williamboman/mason-lspconfig.nvim'},
-      {'hrsh7th/cmp-nvim-lsp'}, -- Required
-      {'hrsh7th/nvim-cmp'},     -- Required
-      {'L3MON4D3/LuaSnip'},     -- Required
-		}
-	},
+  {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.2',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    version = false,
+    build = ':TSUpdate',
+    event = { 'BufReadPost', 'BufNewFile' },
+    dependencies = {
+      {
+        'nvim-treesitter/nvim-treesitter-textobjects',
+        init = function()
+          require('lazy.core.loader').disable_rtp_plugin('nvim-treesitter-textobjects')
+          load_textobjects = true
+        end,
+      }
+    },
+    cmd = { 'TSUpdateSync' },
+  },
+  {
+    'theprimeagen/harpoon',
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+  {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    dependencies = {
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
+      { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+      { 'hrsh7th/nvim-cmp' },     -- Required
+      { 'L3MON4D3/LuaSnip' },     -- Required
+    }
+  },
   { 'github/copilot.vim' },
   { 'nvim-tree/nvim-tree.lua' },
   { 'nvim-tree/nvim-web-devicons' },
-  { 
+  {
     'romgrk/barbar.nvim',
     dependencies = {
       'lewis6991/gitsigns.nvim',
@@ -59,7 +58,7 @@ return {
   { "miyakogi/conoline.vim" },
   { "nvim-lualine/lualine.nvim" },
   { "f-person/git-blame.nvim" },
-  { 
+  {
     "prettier/vim-prettier",
     run = "npm i",
   },
@@ -79,7 +78,7 @@ return {
       --   `nvim-notify` is only needed, if you want to use the notification view.
       --   If not available, we use `mini` as the fallback
       "rcarriga/nvim-notify",
-      }
+    }
   },
   {
     "lukas-reineke/indent-blankline.nvim",
@@ -89,12 +88,18 @@ return {
     opts = {},
   },
   {
-    url = 'https://github.com/windwp/nvim-ts-autotag',
+    'windwp/nvim-ts-autotag',
   },
   {
-    'norcalli/nvim-colorizer.lua' 
+    'norcalli/nvim-colorizer.lua'
   },
   {
     "daschw/leaf.nvim",
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
   }
 }
