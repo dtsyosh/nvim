@@ -20,7 +20,6 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.ensure_installed({
-	'tsserver',
 	'eslint',
 	'lua_ls',
   'ruby_lsp',
@@ -56,3 +55,4 @@ cmp.setup({
 })
 
 require('lspconfig').ruby_lsp.setup({})
+require('typescript-tools').setup({})
