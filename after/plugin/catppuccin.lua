@@ -7,8 +7,8 @@ require("catppuccin").setup({
     shade = "dark",
     percentage = 0.15,
   },
-  transparent_background = true,
-  show_end_of_buffer = false, -- show the '~' characters after the end of buffers
+  transparent_background = false,
+  show_end_of_buffer = true, -- show the '~' characters after the end of buffers
   term_colors = true,
   compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
   styles = {
@@ -44,7 +44,7 @@ require("catppuccin").setup({
     },
     aerial = true,
     alpha = false,
-    barbar = false,
+    barbar = true,
     beacon = false,
     cmp = true,
     coc_nvim = false,
@@ -55,9 +55,9 @@ require("catppuccin").setup({
     fern = false,
     fidget = true,
     flash = true,
-    gitgutter = false,
+    gitgutter = true,
     gitsigns = true,
-    harpoon = false,
+    harpoon = true,
     headlines = false,
     hop = true,
     illuminate = true,
