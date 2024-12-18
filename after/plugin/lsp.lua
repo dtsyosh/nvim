@@ -22,8 +22,10 @@ end)
 lsp.ensure_installed({
 	'eslint',
 	'lua_ls',
-  'ruby_lsp',
   'emmet_ls',
+  'cssls',
+  'cssmodules_ls',
+  'prismals'
 })
 
 lsp.set_sign_icons({

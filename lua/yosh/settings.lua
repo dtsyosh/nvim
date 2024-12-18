@@ -1,6 +1,8 @@
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.spelllang = "en_us"
+vim.opt.spell = true
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -27,6 +29,7 @@ vim.g.mapleader = " "
 alt_send_esc = false
 
 vim.opt.listchars = {
+  space = "⋅",
   tab = "▸ ",
   trail = "·",
   extends = "❯",
